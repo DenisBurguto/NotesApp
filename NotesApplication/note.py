@@ -116,7 +116,7 @@ def delete(note_id):
                             data['notes'].remove(note)
                             deleted = True
                         case 'no':
-                            print('return without deleting')
+                            print('canceling')
                         case _:
                             print('wrong input')
                     break  # id is unique
@@ -126,7 +126,7 @@ def delete(note_id):
                 json.dump(data, outfile)
                 print('deleted, return')
         else:
-            print("no such id found, return to menu")
+            print("no such id found or delete canceled, return to menu")
 
     except JSONDecodeError:  # empty file case:
         print("there is no any note in your list")
