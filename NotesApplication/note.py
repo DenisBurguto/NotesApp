@@ -7,7 +7,7 @@ from pprint import pprint
 
 
 def add():
-    out_dict = dict();
+    out_dict = dict()
     out_dict['id'] = str(uuid.uuid4())
     out_dict['title'] = (input("please enter note title \n:"))
     out_dict['message'] = (input('please enter your message \n:'))
@@ -116,7 +116,7 @@ def delete(note_id):
                             data['notes'].remove(note)
                             deleted = True
                         case 'no':
-                            print('canceling')
+                            print('canceling..')
                         case _:
                             print('wrong input')
                     break  # id is unique
